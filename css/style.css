@@ -114,13 +114,24 @@ body {
     padding: 30px;
     margin-bottom: 30px;
     border: 1px dashed #ccc;
-    transition: 0.3s;
+    transition: all 0.3s ease-in-out; /* Smoother transition for all properties */
+    position: relative;
+    overflow: hidden;
+    background-color: #fff; /* Default background for non-warning cards */
+    color: #212529; /* Default text color */
 }
 
 .service-box:hover {
-    background: #f8f9fa;
-    border-style: solid;
-    border-color: #ffc107;
+    background-color: #ffc107 !important; /* Primary theme color on hover */
+    border-color: #ffc107 !important; /* Solid primary border on hover */
+    transform: translateY(-8px); /* Lift effect */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.service-box:hover h4,
+.service-box:hover p,
+.service-box:hover a {
+    color: #212529 !important; /* Dark text for contrast on yellow background */
 }
 
 /* Modern Hero Enhancements */

@@ -134,6 +134,34 @@ body {
     color: #212529 !important; /* Dark text for contrast on yellow background */
 }
 
+.service-box a {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: inline-block;
+    padding: 10px 25px;
+    background: #212529;
+    color: #fff !important;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    text-decoration: none !important;
+}
+
+.service-box a i {
+    transition: transform 0.3s ease;
+}
+
+.service-box:hover a {
+    background-color: #fff !important;
+    color: #212529 !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.service-box a:hover i {
+    transform: translateX(5px);
+}
+
 /* Modern Hero Enhancements */
 .banner .overlay {
     position: absolute;
@@ -618,4 +646,32 @@ body {
         margin-bottom:15px;
     }
 
+}
+
+/* Blog Section Hover Effects - Modern Trend */
+.blog-box {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    cursor: pointer;
+}
+
+.blog-box:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2) !important;
+    border-color: #ffc107 !important;
+}
+
+.blog-box .blog-image img {
+    transition: transform 0.8s ease;
+}
+
+.blog-box:hover .blog-image img {
+    transform: scale(1.1);
+}
+
+.blog-box .blog-info h4 a {
+    transition: color 0.3s ease;
+}
+
+.blog-box:hover .blog-info h4 a {
+    color: #ffc107 !important;
 }

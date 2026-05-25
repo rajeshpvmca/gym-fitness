@@ -52,12 +52,13 @@ async function loadComponents() {
     footerPlaceholder.innerHTML = await footerRes.text();
 
     // Newsletter Validation & Redirection
-    const newsletterBtn = document.getElementById("newsletterBtn");
+    const newsletterForm = document.querySelector(".input-group[action='404.html']");
     const newsletterEmail = document.getElementById("newsletterEmail");
     const newsletterError = document.getElementById("newsletterError");
 
-    if (newsletterBtn && newsletterEmail) {
-      newsletterBtn.addEventListener("click", function () {
+    if (newsletterForm && newsletterEmail) {
+      newsletterForm.addEventListener("submit", function (e) {
+        e.preventDefault();
         const email = newsletterEmail.value;
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -66,10 +67,42 @@ async function loadComponents() {
 
         if (emailPattern.test(email)) {
           window.location.href = "404.html";
+        } else {
+          newsletterError.textContent = "Please enter a valid email address.";
         } 
       });
     }
   }
+
+  // =========================
+  // SMOOTH SCROLL & BACK TO TOP
+  // =========================
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        window.scrollTo({
+          top: target.offsetTop - 80,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
+  const backToTop = document.createElement('button');
+  backToTop.id = "backToTop";
+  backToTop.innerHTML = '<i class="fa fa-arrow-up"></i>';
+  document.body.appendChild(backToTop);
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) backToTop.classList.add('show');
+    else backToTop.classList.remove('show');
+  });
+
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 
   // =========================
   // PRELOADER

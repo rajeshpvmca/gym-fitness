@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gym Fitness</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Banner Section Starts -->
+    <section class="banner position-relative pb-0">
+        <div class="swiper heroSwiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide py-8 position-relative vh-100" style=" background-image: url(assets/images/banner.jpg); background-size: cover; background-position: center;">
+                    <div class="overlay"></div>
+                    <div class="container position-relative z-2 h-100 d-flex align-items-center">
+                        <div class="banner-slide-inner">
+                            <div class="row align-items-center gy-4">
+                                <div class="col-lg-8">
+                                    <div class="banner-left text-center text-lg-start">
+                                        <div class="banner-tag text-white fw-bold text-uppercase mb-4" data-aos="fade-right" data-aos-delay="200">
+                                            Your ultimate fitness destination
+                                        </div>
+                                        <h1 class="display-1 fw-900 text-white mb-4" data-aos="fade-up" data-aos-delay="400">
+                                            Unlock Your Full <span class="text-uppercase spin-container primary">
+                                                <span class="spin">P</span><span class="spin">o</span><span class="spin">t</span><span class="spin">e</span><span class="spin">n</span><span class="spin">t</span><span class="spin">i</span><span class="spin">a</span><span class="spin">l</span>
+                                            </span>
+                                            <!-- <span class="primary">Potential</span> -->
+                                        </h1>
+                                        <p class="lead text-light opacity-75 mb-5 w-75 mx-auto mx-lg-0" data-aos="fade-up" data-aos-delay="600">
+                                            Experience world-class training programs designed to push your limits and achieve the body you've always dreamed of.
+                                        </p>
+                                        <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start" data-aos="fade-up" data-aos-delay="800">
+                                            <a href="contact.html" class="btn btn-warning btn-lg px-5 py-3 fw-bold rounded-pill">Get Started <i class="fa fa-arrow-right ms-2"></i></a>
+                                            <a href="about.html" class="btn btn-outline-light btn-lg px-5 py-3 fw-bold rounded-pill">See Programs</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 d-none d-lg-block">
+                                    <div class="hero-glass-card text-white text-center float-end" data-aos="zoom-in" data-aos-delay="1000">
+                                        <div class="h2 fw-bold primary mb-0">500+</div>
+                                        <p class="small text-uppercase mb-0">Active Members</p>
+                                        <hr class="my-3 opacity-25">
+                                        <div class="d-flex justify-content-center gap-2">
+                                            <i class="fa fa-star primary"></i>
+                                            <i class="fa fa-star primary"></i>
+                                            <i class="fa fa-star primary"></i>
+                                            <i class="fa fa-star primary"></i>
+                                            <i class="fa fa-star primary"></i>
+                                        </div>
+                                        <p class="small mt-2 mb-0 opacity-75">Top Rated Gym</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide py-8 position-relative vh-100" style=" background-image: url(assets/images/banner2.jpg); background-size: cover; background-position: center;">
+                    <div class="overlay"></div>
+                    <div class="container position-relative z-2 h-100 d-flex align-items-center">
+                        <div class="banner-slide-inner">
+                            <div class="row align-items-center gy-4">
+                                <div class="col-lg-8">
+                                    <div class="banner-left text-center text-lg-start">
+                                        <div class="banner-tag text-white fw-bold text-uppercase mb-4" data-aos="fade-right">
+                                            Transform Your Life Today
+                                        </div>
+                                        <h1 class="display-1 fw-900 text-white mb-4">
+                                            Personalized <br>
+                                            <span class="text-uppercase spin-container primary">
+                                                <span class="spin">C</span><span class="spin">o</span><span class="spin">a</span><span class="spin">c</span><span class="spin">h</span><span class="spin">i</span><span class="spin">n</span><span class="spin">g</span>
+                                            </span>
+                                        </h1>
+                                        <p class="lead text-light opacity-75 mb-5 w-75 mx-auto mx-lg-0">
+                                            Our expert coaches provide the guidance, nutrition plans, and motivation you need to hit your milestones.
+                                        </p>
+                                        <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                                            <a href="contact.html" class="btn btn-warning btn-lg px-5 py-3 fw-bold rounded-pill">Start Training</a>
+                                            <a href="about.html" class="btn btn-outline-light btn-lg px-5 py-3 fw-bold rounded-pill">Learn More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section Starts -->
+    <section class="about-us py-5 overflow-hidden">
+        <div class="container">
+            <div class="about-us-inner">
+                <div class="row gx-lg-5 align-items-center gy-5">
+                    <div class="col-lg-5" data-aos="fade-right">
+                        <div class="about-left text-center text-lg-start">
+                            <span class="title-sperator1 m-auto ms-lg-0 mb-2 d-block" style="width: 40%;">
+                                <span class="partner-title text-uppercase primary fw-medium">More about Us</span>
+                            </span>
+                            <h2 class="fw-bold">Make yourself Stronger than your best excuses</h2>
+                            <div class="divider-wave primary mb-4 m-auto ms-lg-0"></div>
+                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p class="fw-bold fst-italic mb-4">“Success usually comes to those who are too busy to be looking for it.”</p>
+                            <div class="d-flex flex-column flex-lg-row flex-wrap gap-4 justify-content-between align-items-center">
+                                <ul class="list-unstyled d-flex align-items-center gap-3 mb-0">
+                                    <li class="h2 mb-0"><i class="fa fa-phone primary" aria-hidden="true"></i></li>
+                                    <li>
+                                        <span class="primary small fw-bold text-uppercase">Need Help</span>
+                                        <p class="mb-0 fw-bold h5">+91 9876543210</p>
+                                    </li>
+                                </ul>
+                                <a href="about.html" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7" data-aos="fade-left">
+                        <div class="about-right">
+                            <div class="row gx-0 align-items-center gy-4">
+                                <div class="col-md-7">
+                                    <div class=" px-2">
+                                        <img src="assets/images/man.jpg" alt="Gym" class="img-fluid rounded-4 shadow border border-5 border-white">
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class=" mt-4 mt-md-0">
+                                        <div class="mb-4 px-2">
+                                            <img src="assets/images/sport.jpg" alt="Fitness" class="img-fluid rounded-4 shadow border border-5 border-white">
+                                        </div>
+                                        <div class="about-experience p-4 bg-primary rounded-4 text-dark shadow mx-2">
+                                            <div class="d-flex align-items-center gap-3">
+                                                <img src="assets/images/expert.png" alt="icon" style="height: 45px; width: 45px;">
+                                                <div>
+                                                    <span class="h2 fw-bold mb-0 d-block">15 +</span>
+                                                    <span class="small text-uppercase fw-bold">Years Experience</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Section Starts -->
+    <section class="feature py-5 text-white overflow-hidden">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="feature-box border rounded-4 border-secondary text-center">
+                        <div class="feature-icon mb-4">
+                            <img src="assets/images/fitness1.png" alt="icon" style="height: 60px;">
+                        </div>
+                        <h4 class="primary text-uppercase mb-3">Achieve your goals</h4>
+                        <p class="small text-light">Professional guidance to help you reach your peak physical condition.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="feature-box border rounded-4 border-warning text-center">
+                        <div class="feature-icon mb-4">
+                            <img src="assets/images/fitness2.png" alt="icon" style="height: 60px;">
+                        </div>
+                        <h4 class="primary text-uppercase mb-3">Train Day and night</h4>
+                        <p class="small text-light">Flexible hours to fit your busy lifestyle. Open 24/7 for members.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="feature-box border rounded-4 border-secondary text-center">
+                        <div class="feature-icon mb-4">
+                            <img src="assets/images/fitness1.png" alt="icon" style="height: 60px;">
+                        </div>
+                        <h4 class="primary text-uppercase mb-3">Best gym equipment</h4>
+                        <p class="small text-light">State-of-the-art machines and free weights for all levels.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Achievement Section Starts -->
+    <section class="achievement py-5 bg-white overflow-hidden">
+        <div class="container">
+            <div class="row align-items-center gy-5">
+                <!-- Left: Stylized Image Side -->
+                <div class="col-lg-5" data-aos="fade-right">
+                    <div class="position-relative p-3">
+                        <!-- Decorative Frame Background -->
+                        <div class="position-absolute top-0 start-0 w-100 h-100 bg-primary rounded-4 rotate-3 opacity-10" style="z-index: -1;"></div>
+                        <!-- Main Image -->
+                        <img src="assets/images/man.jpg" class="img-fluid rounded-4 shadow-lg border border-5 border-white" alt="Our Achievement">
+                        
+                        <!-- Floating Experience Badge -->
+                        <div class="position-absolute bottom-0 start-0 bg-primary p-4 rounded-4 shadow-lg mb-4 ms-n3 d-none d-md-block" data-aos="zoom-in" data-aos-delay="600">
+                            <div class="d-flex align-items-center gap-3">
+                                <img src="assets/images/expert.png" alt="icon" style="height: 50px; width: 50px;">
+                                <div class="text-dark">
+                                    <h4 class="fw-bold mb-0">15+ Years</h4>
+                                    <p class="small mb-0 fw-bold text-uppercase">Of Excellence</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Rich Content Side -->
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="ps-lg-5">
+                        <span class="text-uppercase primary fw-bold letter-spacing-2">Our Achievement</span>
+                        <h2 class="fw-bold mt-2 mb-4">Helping You Transform Your Body & Life Since 2010</h2>
+                        <div class="divider-wave primary m-0 mb-4" style="width: 80px; height: 3px;"></div>
+                        <p class="text-muted lead mb-5">We take pride in our milestones. From being the local community's favorite to winning national fitness awards, our journey is defined by the success stories of our 25,000+ happy members.</p>
+                        
+                        <!-- Modern Stats Grid -->
+                        <div class="row g-4 mb-5">
+                            <div class="col-sm-6">
+                                <div class="achievement-card p-4 border rounded-4 transition-transform h-100">
+                                    <div class="d-flex align-items-center gap-3 mb-2">
+                                        <div class="text-primary"><i class="fa fa-users primary  h3 mb-0"></i></div>
+                                        <h3 class="fw-bold text-dark mb-0"><span class="num" data-val="1250">0</span>+</h3>
+                                    </div>
+                                    <p class="small text-muted text-uppercase fw-bold mb-0 letter-spacing-1">Active Members</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="achievement-card p-4 border rounded-4 transition-transform h-100">
+                                    <div class="d-flex align-items-center gap-3 mb-2">
+                                        <div class="text-primary"><i class="fa fa-star primary  h3 mb-0"></i></div>
+                                        <h3 class="fw-bold text-dark mb-0"><span class="num" data-val="5">0</span>/5</h3>
+                                    </div>
+                                    <p class="small text-muted text-uppercase fw-bold mb-0 letter-spacing-1">Positive Rating</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="achievement-card p-4 border rounded-4 transition-transform h-100">
+                                    <div class="d-flex align-items-center gap-3 mb-2">
+                                        <div class="text-primary"><i class="fa fa-user-circle primary  h3 mb-0"></i></div>
+                                        <h3 class="fw-bold text-dark mb-0"><span class="num" data-val="50">0</span>+</h3>
+                                    </div>
+                                    <p class="small text-muted text-uppercase fw-bold mb-0 letter-spacing-1">Expert Coaches</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="achievement-card p-4 border rounded-4 transition-transform h-100">
+                                    <div class="d-flex align-items-center gap-3 mb-2">
+                                        <div class="text-primary"><i class="fa fa-trophy primary  h3 mb-0"></i></div>
+                                        <h3 class="fw-bold text-dark mb-0"><span class="num" data-val="15">0</span>+</h3>
+                                    </div>
+                                    <p class="small text-muted text-uppercase fw-bold mb-0 letter-spacing-1">Awards Winning</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ad Banner Section Starts -->
+    <section class="ad-banner p-0 bg-dark overflow-hidden position-relative overflow-hidden">
+        <div class="container">
+            <div class="ad-banner-inner">
+                <div class="row gx-md-5 align-items-center gy-5">
+                    <div class="col-xl-3 col-lg-4 col-md-5 order-2 order-md-1">
+                        <div class="circle-container m-auto text-center w-100 h-100 position-relative">
+                            <div class="circle"></div>
+                            <img src="assets/images/summerofffer.png" alt="Trainer" class="position-relative z-1 img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-xl-9 col-lg-8 col-md-7 order-1 order-md-2">
+                        <div class="ad-banner-right text-white text-center text-md-start pt-5 p-md-0 py-lg-5">
+                            <span class=" fw-bold primary">This Summer</span>
+                            <h2 class="text-white my-2 fw-bold">Save 50% Offer</h2>
+                            <p class="mb-4 text-light opacity-75">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <a href="contact.html" class="btn btn-primary btn-lg fw-bold px-5">Become a member</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Ad Banner Section Ends -->
+
+     <!-- Services Section Starts -->
+    <section class="service py-5 bg-light overflow-hidden" data-aos="fade-up">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="text-uppercase primary fw-bold">Our Services</span>
+                <h2 class="fw-bold">Solutions for moving better & feeling healthier</h2>
+                <div class="divider-wave bg-warning mx-auto"></div>
+            </div>
+            <div class="swiper serviceSwiper py-4">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="service-box bg-white rounded-4 shadow-sm text-center h-100 p-4">
+                            <img src="assets/images/powerlifting.png" alt="fitness" class="mb-3" style="height: 60px;">
+                            <h4 class="primary fw-bold">Gym Fitness</h4>
+                            <p class="text-muted small">Comprehensive gym training tailored to your fitness level.</p>
+                            <a href="#" class="text-decoration-none text-dark fw-bold small">READ MORE <i class="fa fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="service-box bg-warning rounded-4 shadow-sm text-center text-dark h-100 p-4 border-warning">
+                            <img src="assets/images/descipline.png" alt="body building" class="mb-3" style="height: 60px;">
+                            <h4 class="fw-bold">Body Building</h4>
+                            <p class="small">Advanced weight training programs for muscle growth and strength.</p>
+                            <a href="#" class="text-decoration-none text-dark fw-bold small">READ MORE <i class="fa fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="service-box bg-white rounded-4 shadow-sm text-center h-100 p-4">
+                            <img src="assets/images/weightloss.png" alt="power lifting" class="mb-3" style="height: 60px;">
+                            <h4 class="primary fw-bold">Power Lifting</h4>
+                            <p class="text-muted small">Focus on the big three: Squat, Bench Press, and Deadlift.</p>
+                            <a href="#" class="text-decoration-none text-dark fw-bold small">READ MORE <i class="fa fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="service-box bg-white rounded-4 shadow-sm text-center h-100 p-4">
+                            <img src="assets/images/powerlifting.png" alt="fitness" class="mb-3" style="height: 60px;">
+                            <h4 class="primary fw-bold">Yoga Flow</h4>
+                            <p class="text-muted small">Strengthen your mind and body with professional yoga.</p>
+                            <a href="#" class="text-decoration-none text-dark fw-bold small">READ MORE <i class="fa fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                    <!-- Slide 5 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="service-box bg-white rounded-4 shadow-sm text-center h-100 p-4">
+                            <img src="assets/images/weightloss.png" alt="fitness" class="mb-3" style="height: 60px;">
+                            <h4 class="primary fw-bold">Weight Loss</h4>
+                            <p class="text-muted small">Strengthen your mind and body with professional yoga.</p>
+                            <a href="#" class="text-decoration-none text-dark fw-bold small">READ MORE <i class="fa fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                    <!-- Slide 6 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="service-box bg-white rounded-4 shadow-sm text-center h-100 p-4">
+                            <img src="assets/images/descipline.png" alt="fitness" class="mb-3" style="height: 60px;">
+                            <h4 class="primary fw-bold">Discipline</h4>
+                            <p class="text-muted small">Strengthen your mind and body with professional yoga.</p>
+                            <a href="#" class="text-decoration-none text-dark fw-bold small">READ MORE <i class="fa fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teams Section Starts -->
+    <section class="team py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="text-warning fw-bold text-uppercase">Meet our Teams</span>
+                <h2 class="fw-bold">Dedicated & Professional Trainers</h2>
+                <div class="divider-wave bg-warning mx-auto"></div>
+            </div>
+            <div class="row gy-5">
+                <!-- Trainer 1 -->
+                <div class="col-lg-3 col-md-6" data-aos="flip-left" data-aos-delay="100">
+                    <div class="team-box text-center shadow-sm rounded-4 overflow-hidden bg-white pb-3">
+                        <div class="p-3">
+                            <img src="assets/images/trainer1.jpg" alt="Trainer" class="rounded-4">
+                        </div>
+                        <p class="primary mb-1 fw-bold">Instructor</p>
+                        <h5 class="fw-bold">Kimberly Walker</h5>
+                        <ul class="social-link list-unstyled d-flex justify-content-center gap-2 mt-2">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Trainer 2 -->
+                <div class="col-lg-3 col-md-6" data-aos="flip-left" data-aos-delay="200">
+                    <div class="team-box text-center shadow-sm rounded-4 overflow-hidden bg-white pb-3">
+                        <div class="p-3">
+                            <img src="assets/images/trainer2.jpg" alt="Trainer" class="rounded-4">
+                        </div>
+                        <p class="primary mb-1 fw-bold">Instructor</p>
+                        <h5 class="fw-bold">Smith Machine</h5>
+                        <ul class="social-link list-unstyled d-flex justify-content-center gap-2 mt-2">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Trainer 3 -->
+                <div class="col-lg-3 col-md-6" data-aos="flip-left" data-aos-delay="300">
+                    <div class="team-box text-center shadow-sm rounded-4 overflow-hidden bg-white pb-3">
+                        <div class="p-3">
+                            <img src="assets/images/trainer3.jpg" alt="Trainer" class="rounded-4">
+                        </div>
+                        <p class="primary mb-1 fw-bold">Personal Trainer</p>
+                        <h5 class="fw-bold">Jane Doe</h5>
+                        <ul class="social-link list-unstyled d-flex justify-content-center gap-2 mt-2">
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Trainer 4 -->
+                <div class="col-lg-3 col-md-6" data-aos="flip-left" data-aos-delay="400">
+                    <div class="team-box text-center shadow-sm rounded-4 overflow-hidden bg-white pb-3">
+                        <div class="p-3">
+                            <img src="assets/images/trainer4.jpg" alt="Trainer" class="rounded-4">
+                        </div>
+                        <p class="primary mb-1 fw-bold">Senior Coach</p>
+                        <h5 class="fw-bold">Alex Hunter</h5>
+                        <ul class="social-link list-unstyled d-flex justify-content-center gap-2 mt-2">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Testimonial Section Starts -->
+    <section class="testimonial py-5 position-relative rounded-top-5 overflow-hidden">
+        <div class="overlay"></div>
+        <div class="container position-relative">
+            <div class="testimonial-inner py-5">
+                <div class="row gx-lg-5 gy-5">
+                    <div class="col-lg-5">
+                        <div class="testimonial-left text-white text-center text-lg-start" data-aos="fade-right">
+                            <span class="title-sperator1 m-auto ms-lg-0 mb-2 d-block" style="width: 40%;">
+                                <span class="text-uppercase primary fw-bold">Testimonails</span>
+                            </span>
+                            <h2 class="text-white fw-bold">What's Clients Say About Bodyboost</h2>
+                            <div class="divider-wave mb-4 m-auto ms-lg-0"></div>
+                            <p class="text-light opacity-75">Enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+                            <p class="mb-4 text-light opacity-75">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-7" data-aos="fade-left">
+                        <div class="testimonial-right">
+                            <div class="swiper testimonialSwiper">
+                                <div class="swiper-wrapper">
+                                    <!-- Testimonial 1 -->
+                                    <div class="swiper-slide testimonial-box rounded-4 text-white text-center">
+                                        <div class="testimonial-top p-5 rounded-4 border-dashed border-2">
+                                            <div class="testimonial-icon h2 mb-3">
+                                                <i class="fa fa-quote-left primary bg-white bg-opacity-25 text-center rounded-circle p-3" aria-hidden="true" style="width: 60px; height: 60px; line-height: 25px;"></i>
+                                            </div>
+                                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor.</p>
+                                        </div>
+                                        <div class="testimonial-bottom" style="margin-top: -30px;">
+                                            <div class="testimonial-image mb-3">
+                                                <img src="assets/images/trainer1.jpg" alt="trainer" class="rounded-circle object-fit-cover m-auto" style="height: 80px; width: 80px; border: 5px solid #fff;">
+                                            </div>
+                                            <h4 class="primary fw-bold">Harry Houdson</h4>
+                                            <p class="mb-0 text-light opacity-75">Member</p>
+                                        </div>
+                                    </div>
+                                    <!-- Testimonial 2 -->
+                                    <div class="swiper-slide testimonial-box rounded-4 text-white text-center">
+                                        <div class="testimonial-top p-5 rounded-4 border-dashed border-2">
+                                            <div class="testimonial-icon h2 mb-3">
+                                                <i class="fa fa-quote-left primary bg-white bg-opacity-25 text-center rounded-circle p-3" aria-hidden="true" style="width: 60px; height: 60px; line-height: 25px;"></i>
+                                            </div>
+                                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor.</p>
+                                        </div>
+                                        <div class="testimonial-bottom" style="margin-top: -30px;">
+                                            <div class="testimonial-image mb-3">
+                                                <img src="assets/images/trainer2.jpg" alt="trainer" class="rounded-circle object-fit-cover m-auto" style="height: 80px; width: 80px; border: 5px solid #fff;">
+                                            </div>
+                                            <h4 class="primary fw-bold">Jane Smith</h4>
+                                            <p class="mb-0 text-light opacity-75">Member</p>
+                                        </div>
+                                    </div>
+                                    <!-- Testimonial 3 -->
+                                    <div class="swiper-slide testimonial-box rounded-4 text-white text-center">
+                                        <div class="testimonial-top p-5 rounded-4 border-dashed border-2">
+                                            <div class="testimonial-icon h2 mb-3">
+                                                <i class="fa fa-quote-left primary bg-white bg-opacity-25 text-center rounded-circle p-3" aria-hidden="true" style="width: 60px; height: 60px; line-height: 25px;"></i>
+                                            </div>
+                                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor.</p>
+                                        </div>
+                                        <div class="testimonial-bottom" style="margin-top: -30px;">
+                                            <div class="testimonial-image mb-3">
+                                                <img src="assets/images/trainer4.jpg" alt="trainer" class="rounded-circle object-fit-cover m-auto" style="height: 80px; width: 80px; border: 5px solid #fff;">
+                                            </div>
+                                            <h4 class="primary fw-bold">Smith Machine</h4>
+                                            <p class="mb-0 text-light opacity-75">Member</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination mt-5 position-relative"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial Section Ends -->
+
+    <!-- Pricing Section Starts -->
+    <section class="price py-5 bg-dark text-white overflow-hidden">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-down">
+                <span class="text-uppercase primary fw-bold">Pricing Plans</span>
+                <h2 class="fw-bold">Professional training at affordable rates</h2>
+                <div class="divider-wave bg-warning mx-auto"></div>
+            </div>
+            <div class="row gy-4">
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card bg-secondary border-0 p-5 rounded-4 text-center text-white h-100 pricing-card">
+                        <h4>Basic</h4>
+                        <h2 class="my-4">$19.99 <small class="h6">/mo</small></h2>
+                        <ul class="list-unstyled mb-5 text-start">
+                            <li class="mb-2"><i class="fa fa-check me-2"></i> Gym Access</li>
+                            <li class="mb-2"><i class="fa fa-check me-2"></i> 1 Program</li>
+                            <li class="mb-2 opacity-50"><i class="fa fa-times me-2"></i> Personal Trainer</li>
+                            <li class="mb-2 opacity-50"><i class="fa fa-times me-2"></i> Diet Plan</li>
+                        </ul>
+                        <a href="#" class="btn btn-warning fw-bold">Join Now</a>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card bg-primary border-0 p-5 rounded-4 text-center text-dark h-100 pricing-card highlighted">
+                        <h4>Standard</h4>
+                        <h2 class="my-4">$39.99 <small class="h6">/mo</small></h2>
+                        <ul class="list-unstyled mb-5 text-start">
+                            <li class="mb-2"><i class="fa fa-check me-2"></i> Full Access</li>
+                            <li class="mb-2"><i class="fa fa-check me-2"></i> Trainer Help</li>
+                            <li class="mb-2"><i class="fa fa-check me-2"></i> Group Classes</li>
+                            <li class="mb-2 opacity-50"><i class="fa fa-times me-2"></i> Diet Plan</li>
+                        </ul>
+                        <a href="#" class="btn btn-dark fw-bold">Join Now</a>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card bg-secondary border-0 p-5 rounded-4 text-center text-white h-100 pricing-card">
+                        <h4>Ultimate</h4>
+                        <h2 class="my-4">$59.99 <small class="h6">/mo</small></h2>
+                        <ul class="list-unstyled mb-5 text-start">
+                            <li class="mb-2"><i class="fa fa-check me-2"></i> Personal Coach</li>
+                            <li class="mb-2"><i class="fa fa-check me-2"></i> Diet Plan</li>
+                            <li class="mb-2"><i class="fa fa-check me-2"></i> 24/7 Access</li>
+                            <li class="mb-2"><i class="fa fa-check me-2"></i> Advanced Programs</li>
+                        </ul>
+                        <a href="#" class="btn btn-warning fw-bold">Join Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section Starts -->
+    <section class="stats py-5 bg-white overflow-hidden">
+        <div class="container">
+            <div class="stats-inner">
+                <div class="row gx-lg-5 gy-5 align-items-center">
+                    <div class="col-lg-5 order-2 order-lg-1" data-aos="fade-left">
+                        <div class="stats-left position-relative">
+                            <div class="stats-image">
+                                <img src="assets/images/sport.jpg" alt="Statistics" class="img-fluid rounded-4 shadow w-100">
+                            </div>
+                            <div class="stat-bar-container">
+                                <div class="stat-bar shadow-lg bg-white rounded-4 p-4">
+                                <ul class="list-unstyled mb-0">
+                                    <li class="mb-4">
+                                        <p class="text-dark text-uppercase h6 fw-bold">Client Satisfaction</p>
+                                        <div class="progress-bar-section">
+                                            <div class="progress position-relative overflow-visible bg-light" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="height: 10px">
+                                                <div class="progress-bar rounded-start-2 bg-primary position-relative overflow-visible" style="width: 0%" data-width="90%">
+                                                    <div class="percentage-wrapper position-absolute bg-primary rounded-circle text-dark fw-bold d-flex align-items-center justify-content-center" style="width: 40px; height: 40px; top: -15px; right: -20px; border: 4px solid #fff; font-size: 12px;">
+                                                        <span class="progress-num" data-val="90">0</span>%
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <p class="text-dark text-uppercase h6 fw-bold">Customer Support</p>
+                                        <div class="progress-bar-section">
+                                            <div class="progress position-relative overflow-visible bg-light" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="height: 10px">
+                                                <div class="progress-bar rounded-start-2 bg-primary position-relative overflow-visible" style="width: 0%" data-width="85%">
+                                                    <div class="percentage-wrapper position-absolute bg-primary rounded-circle text-dark fw-bold d-flex align-items-center justify-content-center" style="width: 40px; height: 40px; top: -15px; right: -20px; border: 4px solid #fff; font-size: 12px;">
+                                                        <span class="progress-num" data-val="85">0</span>%
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 order-1 order-lg-2" data-aos="fade-right">
+                        <div class="stat-right text-center text-lg-start">
+                            <span class="text-uppercase primary fw-bold">Our Statistics</span>
+                            <h2 class="fw-bold mt-2">Achieve Your Goals. Unlock Your Full Potential.</h2>
+                            <div class="divider-wave primary mb-4 m-auto ms-lg-0"></div>
+                            <p class="text-muted mb-5">Our data-driven approach ensures that every member receives the best possible support and training environment to succeed.</p>
+                            <div class="mb-4 text-start">
+                                <ul class="list-unstyled d-flex align-items-center gap-3 border-bottom-dashed pb-3 mb-3">
+                                    <li><img src="assets/images/powerlifting.png" alt="fitness" style="width: 50px; height: 50px;"></li>
+                                    <li>
+                                        <h5 class="primary fw-bold mb-1">Free Fitness Training</h5>
+                                        <p class="mb-0 small text-muted">Get started with our complimentary intro sessions designed for newcomers.</p>
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled d-flex align-items-center gap-3">
+                                    <li><img src="assets/images/weightloss.png" alt="fitness" style="width: 50px; height: 50px;"></li>
+                                    <li>
+                                        <h5 class="primary fw-bold mb-1">Cardio and Strength</h5>
+                                        <p class="mb-0 small text-muted">Balanced programs focusing on both endurance and power building.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a href="about.html" class="btn btn-primary btn-lg">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Stats Section Ends -->
+
+    <!-- Blog Section Starts -->
+    <section class="blog py-5 bg-light overflow-hidden">
+        <div class="container">
+            <div class="blog-inner">
+                <div class="blog-title text-center w-lg-50 m-auto mb-5" data-aos="fade-down">
+                    <span class="text-uppercase primary fw-bold">Our Latest Articles</span>
+                    <h2 class="fw-bold">Achieve Your Goals. Unlock Your Full Potential.</h2>
+                    <div class="divider-wave primary mx-auto"></div>
+                </div>
+                <div class="blog-body">
+                    <div class="row gx-lg-5 gy-4">
+                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                            <div class="blog-box rounded-4 overflow-hidden border border-lightgrey text-center shadow-sm bg-white h-100">
+                                <div class="blog-image position-relative">
+                                    <img src="assets/images/articles1.jpg" alt="fitness gym" class="img-fluid" style="height: 220px; width: 100%; object-fit: cover;">
+                                </div>
+                                <div class="blog-info p-4">
+                                    <h4 class="mb-3"><a href="#" class="text-dark text-decoration-none fw-bold">How to get the most out of gym membership</a></h4>
+                                    <p class="text-muted small">Learn the best strategies to maximize your gym results and stay consistent with your routine.</p>
+                                </div>
+                                <div class="blog-bottom px-3 py-2 border-top">
+                                    <span class="small text-muted">July 28, 2025 <span class="mx-2">|</span> No comments</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                            <div class="blog-box rounded-4 overflow-hidden border border-lightgrey text-center shadow-sm bg-white h-100">
+                                <div class="blog-image position-relative">
+                                    <img src="assets/images/articles2.jpg" alt="fitness gym" class="img-fluid" style="height: 220px; width: 100%; object-fit: cover;">
+                                </div>
+                                <div class="blog-info p-4">
+                                    <h4 class="mb-3"><a href="#" class="text-dark text-decoration-none fw-bold">Happy moments when you achieve your aim</a></h4>
+                                    <p class="text-muted small">Success is a journey of small wins. Discover the joy of hitting your fitness milestones.</p>
+                                </div>
+                                <div class="blog-bottom px-3 py-2 border-top">
+                                    <span class="small text-muted">July 21, 2025 <span class="mx-2">|</span> No comments</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12" data-aos="fade-up" data-aos-delay="300">
+                            <div class="blog-box rounded-4 overflow-hidden border border-lightgrey text-center shadow-sm bg-white h-100">
+                                <div class="blog-image position-relative">
+                                    <img src="assets/images/banner2.jpg" alt="fitness gym" class="img-fluid" style="height: 220px; width: 100%; object-fit: cover;">
+                                </div>
+                                <div class="blog-info p-4">
+                                    <h4 class="mb-3"><a href="#" class="text-dark text-decoration-none fw-bold">Think outside the box – change the game</a></h4>
+                                    <p class="text-muted small">Vary your workouts and challenge your limits with creative and intense fitness routines.</p>
+                                </div>
+                                <div class="blog-bottom px-3 py-2 border-top">
+                                    <span class="small text-muted">July 15, 2025 <span class="mx-2">|</span> No comments</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Section Ends -->
+
+    <!-- Quote Section -->
+    <section class="contact-qoute py-10 position-relative rounded-top-5 overflow-hidden" style="background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('assets/images/articles1.jpg') center/cover no-repeat fixed;">
+        <div class="container position-relative z-1">
+            <div class="row align-items-center gy-5">
+                <div class="col-lg-8 text-center text-lg-start" data-aos="fade-right">
+                    <div class="d-flex align-items-center justify-content-center justify-content-lg-start gap-3 mb-4">
+                        <!-- <div class="divider-wave primary m-0" style="width: 50px; height: 3px;"></div> -->
+                        <span class="text-uppercase primary fw-bold">Get Started Today</span>
+                    </div>
+                    <h2 class="text-white display-5 fw-bold mb-4">READY TO PUSH YOUR LIMITS AND ACHIEVE YOUR GOALS?</h2>
+                    <p class="text-light opacity-75 lead mb-5">Join thousands of others who have transformed their lives. Our team of expert trainers is ready to create a personalized plan just for you. Whether you have a question or are ready to sign up, we're here to support you 24/7.</p>
+                    
+                    <div class="row g-4 text-start">
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="bg-primary p-3 rounded-circle text-dark d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                    <i class="fa fa-envelope h4 mb-0"></i>
+                                </div>
+                                <div>
+                                    <h6 class="text-white fw-bold mb-1">Email Us</h6>
+                                    <p class="text-light opacity-50 mb-0">info@gymfitness.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="bg-primary p-3 rounded-circle text-dark d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                    <i class="fa fa-phone h4 mb-0"></i>
+                                </div>
+                                <div>
+                                    <h6 class="text-white fw-bold mb-1">Call Support</h6>
+                                    <p class="text-light opacity-50 mb-0">+91 9876543210</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end" data-aos="zoom-in">
+                    <a href="contact.html" class="btn btn-primary btn-lg fw-bold rounded-pill px-5 py-3 shadow-lg transition-transform">
+                        CONTACT US <i class="fa fa-long-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

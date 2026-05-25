@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="overflow-x-hidden">
+    <!-- Animated Background -->
+    <div class="auth-bg-wrapper">
+        <div class="auth-bg-animated" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/images/banner2.jpg');"></div>
+    </div>
+
+    <!-- Back to Home -->
+    <a href="index.html" class="back-home" data-aos="fade-right">
+        <i class="fa fa-arrow-left me-2"></i>Back To Home
+    </a>
+
+    <div class="container min-vh-100 d-flex flex-column justify-content-center align-items-center py-5 mt-4">
+
+        <div class="card shadow-lg border-0 rounded-5 w-100" data-aos="zoom-in" data-aos-duration="1000"
+            style="max-width:500px; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);">
+
+            <div class="card-body p-4 p-sm-5">
+
+                <div class="text-center mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-primary rounded-circle d-inline-flex p-3 mb-3 shadow">
+                        <img src="assets/images/logoStackly.webp" alt="logo" height="30">
+                    </div>
+
+                    <h2 class="fw-bold text-dark">Create Account</h2>
+                    <p class="text-muted small">Join Stackly Gym and start your transformation</p>
+                </div>
+
+            <form id="signupForm" data-aos="fade-up" data-aos-delay="400">
+
+                    <!-- Full Name -->
+                    <div class="input-group input-group-lg mb-3">
+                        <span class="input-group-text bg-light border-end-0 rounded-start-pill">
+                            <i class="fa fa-user text-muted"></i>
+                        </span>
+                        <input type="text" class="form-control bg-light border-start-0 rounded-end-pill" 
+                            placeholder="Full Name" id="name" required>
+                    </div>
+
+                    <!-- Role Selection -->
+                    <div class="mb-3">
+                        <div class="input-group input-group-lg">
+                            <span class="input-group-text bg-light border-end-0 rounded-start-pill">
+                                <i class="fa fa-briefcase text-muted"></i>
+                            </span>
+                            <select class="form-select bg-light border-start-0 rounded-end-pill" id="role" required>
+                                <option value="">Select Role</option>
+                                <option>Admin</option>
+                                <option>Trainer</option>
+                                <option>Member</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="input-group input-group-lg mb-3">
+                        <span class="input-group-text bg-light border-end-0 rounded-start-pill">
+                            <i class="fa fa-envelope text-muted"></i>
+                        </span>
+                        <input type="email" class="form-control bg-light border-start-0 rounded-end-pill" 
+                            placeholder="Email Address" id="email" required>
+                    </div>
+
+                    <!-- Password -->
+                    <div class="input-group input-group-lg mb-3">
+                        <span class="input-group-text bg-light border-end-0 rounded-start-pill">
+                            <i class="fa fa-lock text-muted"></i>
+                        </span>
+                        <input type="password" class="form-control bg-light border-start-0 border-end-0" 
+                            placeholder="Password" id="password" required>
+                        <span class="input-group-text bg-light border-start-0 rounded-end-pill toggle-password" style="cursor: pointer;">
+                            <i class="fa fa-eye-slash text-muted"></i>
+                        </span>
+                    </div>
+
+                    <!-- Confirm Password -->
+                    <div class="input-group input-group-lg mb-3">
+                        <span class="input-group-text bg-light border-end-0 rounded-start-pill">
+                            <i class="fa fa-check-circle text-muted"></i>
+                        </span>
+                        <input type="password" class="form-control bg-light border-start-0 border-end-0" 
+                            placeholder="Confirm Password" id="confirmPassword" required>
+                        <span class="input-group-text bg-light border-start-0 rounded-end-pill toggle-password" style="cursor: pointer;">
+                            <i class="fa fa-eye-slash text-muted"></i>
+                        </span>
+                    </div>
+
+                    <!-- Terms & Conditions -->
+                    <div class="form-check mb-4 px-5">
+                        <input type="checkbox" class="form-check-input" id="terms" required>
+                        <label class="form-check-label small text-muted" for="terms">
+                            I accept the <a href="#" class="text-decoration-none primary fw-bold">Terms & Conditions</a>
+                        </label>
+                    </div>
+
+                    <!-- Register Button -->
+                    <button class="btn btn-primary btn-lg w-100 fw-bold rounded-pill shadow">
+                        Sign Up
+                        <i class="fa fa-user-plus ms-2"></i>
+                    </button>
+
+            </form>
+
+                <!-- Redirect to Login -->
+                <div class="text-center mt-4">
+                    <p class="mb-0 small">
+                        Already have an account?
+                        <a href="login.html" class="fw-bold text-decoration-none primary">
+                            Login
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Simple JS to ensure background covers properly on mobile -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.style.minHeight = window.innerHeight + 'px';
+            AOS.init({ duration: 1000, once: true });
+        });
+    </script>
+    <script src="js/auth.js"></script>
+
+</body>
+
+</html>

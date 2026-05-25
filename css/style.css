@@ -336,6 +336,78 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
+/* Modern Gym Preloader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+#preloader.preloader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-plate {
+    width: 100px;
+    height: 100px;
+    background: #222;
+    border: 8px solid #333;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 30px rgba(255, 193, 7, 0.2);
+    animation: plateSpin 2s linear infinite;
+}
+
+.loader-plate::before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    background: #111;
+    border-radius: 50%;
+    border: 3px solid #ffc107;
+}
+
+.loader-plate::after {
+    content: '20KG';
+    position: absolute;
+    color: #ffc107;
+    font-size: 11px;
+    font-weight: 900;
+    top: 12px;
+}
+
+.loader-text {
+    margin-top: 25px;
+    font-size: 1.2rem;
+    font-weight: 900;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    animation: textPulse 1.5s infinite;
+}
+
+@keyframes plateSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes textPulse {
+    0%, 100% { opacity: 0.3; transform: scale(0.95); }
+    50% { opacity: 1; transform: scale(1); }
+}
+
 /* Modern Header Styles */
 .navbar {
     padding: 20px 0;

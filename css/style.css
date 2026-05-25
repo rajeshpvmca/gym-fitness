@@ -297,14 +297,19 @@ body {
 
 /* Pricing Section Enhancements */
 .pricing-card {
-    transition: all 0.3s ease-in-out;
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border for all cards */
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 1;
 }
 
 .pricing-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-20px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
     border-color: #ffc107 !important; /* Highlight border on hover */
+    z-index: 2;
 }
 
 .pricing-card .list-unstyled li i {
@@ -312,13 +317,15 @@ body {
     margin-right: 8px;
 }
 
-/* Specific styling for the 'Standard' (middle) card to make it stand out */
 .pricing-card.highlighted {
-    background-color: #ffc107 !important; /* Primary color background */
+    background: linear-gradient(145deg, #ffc107, #ff9800) !important;
     color: #212529 !important; /* Dark text for contrast */
-    transform: translateY(-15px); /* Lift it slightly more */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    border-color: #ffc107 !important;
+    border: none !important;
+    box-shadow: 0 20px 40px rgba(255, 193, 7, 0.2);
+}
+
+.pricing-card.highlighted:hover {
+    box-shadow: 0 30px 70px rgba(255, 193, 7, 0.4);
 }
 
 .pricing-card.highlighted h2,
@@ -328,6 +335,21 @@ body {
 
 .pricing-card.highlighted .list-unstyled li i {
     color: #212529; /* Dark checkmark icons */
+}
+
+.popular-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #000;
+    color: #ffc107;
+    padding: 6px 20px;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
 .letter-spacing-2 {

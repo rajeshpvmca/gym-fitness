@@ -588,3 +588,34 @@ body {
                 font-size: 13px;
             }
         }
+
+        /* responsive navbar */
+        .navbar{
+    background: rgba(0,0,0,.75);
+    backdrop-filter: blur(10px);
+}
+
+.nav-link{
+    color:#fff !important;
+    font-weight:600;
+}
+
+.nav-link:hover,
+.nav-link.active{
+    color:#ffc107 !important;
+}
+
+@media(max-width:991px){
+
+    .navbar-collapse{
+        background:#111;
+        padding:20px;
+        margin-top:15px;
+        border-radius:15px;
+    }
+
+    .navbar-nav{
+        margin-bottom:15px;
+    }
+
+}

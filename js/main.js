@@ -3,54 +3,73 @@ async function loadComponents() {
   // =========================
   // LOAD HEADER
   // =========================
-  const headerRes = await fetch("header.html");
+  const headerPlaceholder = document.getElementById("header-placeholder");
+  if (headerPlaceholder) {
+    const headerRes = await fetch("header.html");
+    headerPlaceholder.innerHTML = await headerRes.text();
 
-  document.getElementById("header-placeholder").innerHTML =
-    await headerRes.text();
+    // Active Navbar Link
+    const currentPath =
+      window.location.pathname.split("/").pop() || "index.html";
 
-  // Active Navbar Link
-  const currentPath =
-    window.location.pathname.split("/").pop() || "index.html";
+    document.querySelectorAll(".navbar-nav .nav-link")
+      .forEach((link) => {
+        if (link.getAttribute("href") === currentPath) {
+          link.classList.add("active");
+        }
+      });
 
-  document.querySelectorAll(".navbar-nav .nav-link")
-    .forEach((link) => {
-
-      if (link.getAttribute("href") === currentPath) {
-
-        link.classList.add("active");
-
-      }
-
-    });
-
-  // Handle Navbar Scroll Effect
-  const navbar = document.querySelector('.navbar');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      navbar.classList.add('navbar-scrolled');
-    } else {
-      navbar.classList.remove('navbar-scrolled');
+    // Handle Navbar Scroll Effect
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add('navbar-scrolled');
+        } else {
+          navbar.classList.remove('navbar-scrolled');
+        }
+      });
     }
-  });
 
-  // Check Login Status & Update Header
-  const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
-  const authLinks = document.getElementById("nav-auth-links");
+    // Check Login Status & Update Header
+    const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+    const authLinks = document.getElementById("nav-auth-links");
 
-  if (loggedInUser && authLinks) {
-    authLinks.innerHTML = `
-      <a href="dashboard.html" class="btn btn-warning btn-sm px-3 fw-bold me-2">Dashboard</a>
-      <button onclick="logout()" class="btn btn-danger btn-sm px-3 fw-bold">Logout</button>
-    `;
+    if (loggedInUser && authLinks) {
+      authLinks.innerHTML = `
+        <a href="dashboard.html" class="btn btn-warning btn-sm px-3 fw-bold me-2">Dashboard</a>
+        <button onclick="logout()" class="btn btn-danger btn-sm px-3 fw-bold">Logout</button>
+      `;
+    }
   }
 
   // =========================
   // LOAD FOOTER
   // =========================
-  const footerRes = await fetch("footer.html");
+  const footerPlaceholder = document.getElementById("footer-placeholder");
+  if (footerPlaceholder) {
+    const footerRes = await fetch("footer.html");
+    footerPlaceholder.innerHTML = await footerRes.text();
 
-  document.getElementById("footer-placeholder").innerHTML =
-    await footerRes.text();
+    // Newsletter Validation & Redirection
+    const newsletterBtn = document.getElementById("newsletterBtn");
+    const newsletterEmail = document.getElementById("newsletterEmail");
+    const newsletterError = document.getElementById("newsletterError");
+
+    if (newsletterBtn && newsletterEmail) {
+      newsletterBtn.addEventListener("click", function () {
+        const email = newsletterEmail.value;
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        // Clear previous error messages
+        newsletterError.textContent = "";
+
+        if (emailPattern.test(email)) {
+          window.location.href = "404.html";
+        } 
+      });
+    }
+  }
 
   // =========================
   // PRELOADER

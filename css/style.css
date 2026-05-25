@@ -449,6 +449,29 @@ body {
     color: #ffc107 !important;
 }
 
+/* Mobile Header Improvements */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background: rgba(22, 22, 22, 0.98); /* Deep dark background for mobile menu */
+        margin-top: 15px;
+        padding: 25px;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(15px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+    }
+
+    .navbar-nav .nav-link {
+        padding: 12px 0 !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        font-size: 1.1rem;
+    }
+
+    .navbar-nav .nav-link::after {
+        display: none; /* Clean look for mobile */
+    }
+}
+
 /* Modern Footer Transitions */
 .footer-link {
     transition: all 0.3s ease;

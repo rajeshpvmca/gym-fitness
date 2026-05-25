@@ -1,5 +1,5 @@
 <footer class="bg-dark  primary py-5">
-    <div class="container text-center text-md-start">
+    <div class="container text-md-start">
         <div class="row">
             <div class="col-lg-4 col-md-6 mb-4">
                 <a class="d-inline-block bg-primary p-2 rounded-5 mb-4" href="index.html">
@@ -26,7 +26,7 @@
                 <ul class="list-unstyled">
                     <li class="d-flex gap-3 mb-3">
                         <i class="fa fa-map-marker primary mt-1"></i>
-                        <span class="text-white small">123 Fitness Street, <br>London, UK - 12345</span>
+                        <span class="text-white small">123 Stackly Street, <br>Chennai, India</span>
                     </li>
                     <li class="d-flex gap-3 mb-3">
                         <i class="fa fa-phone primary mt-1"></i>
@@ -41,10 +41,13 @@
             <div class="col-lg-3 col-md-6 mb-4">
                 <h5 class="fw-bold mb-3">Join Newsletter</h5>
                 <p class="small text-white mb-3">Get the latest workout tips and offers straight to your inbox.</p>
-                <div class="input-group">
-                    <input type="email" class="form-control bg-transparent border-secondary text-white" placeholder="Your Email">
-                    <button class="btn btn-warning px-3"><i class="fa fa-paper-plane"></i></button>
-                </div>
+                <!-- <div class="input-group"> -->
+                    <form action="404.html" class="input-group">
+                    <input id="newsletterEmail" type="email" class="form-control bg-transparent border-secondary text-white" placeholder="Your Email" aria-label="Your Email" required>
+                    <button id="newsletterBtn" class="btn btn-warning px-3"><i class="fa fa-paper-plane"></i></button>
+                    </form>
+                <!-- </div> -->
+                <div id="newsletterError" class="text-danger small mt-2"></div>
             </div>
         </div>
         <hr class="border-secondary">

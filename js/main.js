@@ -54,22 +54,16 @@ async function loadComponents() {
     // Newsletter Validation & Redirection
     const newsletterForm = document.querySelector(".input-group[action='404.html']");
     const newsletterEmail = document.getElementById("newsletterEmail");
-    const newsletterError = document.getElementById("newsletterError");
 
     if (newsletterForm && newsletterEmail) {
       newsletterForm.addEventListener("submit", function (e) {
         e.preventDefault();
         const email = newsletterEmail.value;
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-        // Clear previous error messages
-        newsletterError.textContent = "";
+        const emailPattern = /^[^\s@]+@[^\s@]+$/;
 
         if (emailPattern.test(email)) {
           window.location.href = "404.html";
-        } else {
-          newsletterError.textContent = "Please enter a valid email address.";
-        } 
+        }
       });
     }
   }
@@ -191,6 +185,24 @@ async function loadComponents() {
     });
 
   });
+
+  // =========================
+  // BLOG SIDEBAR NEWSLETTER
+  // =========================
+  const blogForm = document.getElementById("blogNewsletterForm");
+  const blogEmail = document.getElementById("blogNewsletterEmail");
+
+  if (blogForm && blogEmail) {
+    blogForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const email = blogEmail.value;
+      const emailPattern = /^[^\s@]+@[^\s@]+$/;
+
+      if (emailPattern.test(email)) {
+        window.location.href = "404.html";
+      }
+    });
+  }
 
  }
 

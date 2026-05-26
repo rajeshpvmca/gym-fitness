@@ -5,7 +5,7 @@ if (!user) {
   window.location.href = "login.html";
 }
 
-let currentSection = 'overview';
+let currentSection = "overview";
 
 // Preloader handling
 document.addEventListener("DOMContentLoaded", () => {
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       preloader.classList.add("preloader-hidden");
       // Initialize AOS after preloader
-      if (typeof AOS !== 'undefined') {
+      if (typeof AOS !== "undefined") {
         AOS.init({ duration: 1000, once: true });
       }
       renderRoleDashboard();
@@ -28,10 +28,10 @@ document.addEventListener("DOMContentLoaded", () => {
  * Modern Chart.js Initialization
  */
 function initCharts() {
-  if (currentSection !== 'overview') return;
+  if (currentSection !== "overview") return;
 
-  const ctx1 = document.getElementById('chartAnalytics1');
-  const ctx2 = document.getElementById('chartAnalytics2');
+  const ctx1 = document.getElementById("chartAnalytics1");
+  const ctx2 = document.getElementById("chartAnalytics2");
 
   if (!ctx1 || !ctx2) return;
 
@@ -41,114 +41,142 @@ function initCharts() {
     maintainAspectRatio: false,
     plugins: { legend: { display: false } },
     scales: {
-      y: { grid: { color: 'rgba(0,0,0,0.05)', drawBorder: false }, ticks: { font: { size: 10 } } },
-      x: { grid: { display: false }, ticks: { font: { size: 10 } } }
-    }
+      y: {
+        grid: { color: "rgba(0,0,0,0.05)", drawBorder: false },
+        ticks: { font: { size: 10 } },
+      },
+      x: { grid: { display: false }, ticks: { font: { size: 10 } } },
+    },
   };
 
-  if (user.role === 'Admin') {
+  if (user.role === "Admin") {
     new Chart(ctx1, {
-      type: 'line',
+      type: "line",
       data: {
-        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-        datasets: [{
-          label: 'Revenue',
-          data: [1200, 2100, 1800, 3200, 2400, 4500, 3800],
-          borderColor: '#ffc107',
-          backgroundColor: 'rgba(255,193,7,0.1)',
-          fill: true,
-          tension: 0.4
-        }]
+        labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+        datasets: [
+          {
+            label: "Revenue",
+            data: [1200, 2100, 1800, 3200, 2400, 4500, 3800],
+            borderColor: "#ffc107",
+            backgroundColor: "rgba(255,193,7,0.1)",
+            fill: true,
+            tension: 0.4,
+          },
+        ],
       },
-      options: lineOptions
+      options: lineOptions,
     });
 
     new Chart(ctx2, {
-      type: 'doughnut',
+      type: "doughnut",
       data: {
-        labels: ['Basic', 'Standard', 'Ultimate'],
-        datasets: [{
-          data: [350, 480, 420],
-          backgroundColor: ['#333', '#666', '#ffc107'],
-          borderWidth: 0,
-          hoverOffset: 10
-        }]
+        labels: ["Basic", "Standard", "Ultimate"],
+        datasets: [
+          {
+            data: [350, 480, 420],
+            backgroundColor: ["#333", "#666", "#ffc107"],
+            borderWidth: 0,
+            hoverOffset: 10,
+          },
+        ],
       },
-      options: { responsive: true, cutout: '75%', plugins: { legend: { position: 'bottom', labels: { boxWidth: 10, font: { size: 11 } } } } }
+      options: {
+        responsive: true,
+        cutout: "75%",
+        plugins: {
+          legend: {
+            position: "bottom",
+            labels: { boxWidth: 10, font: { size: 11 } },
+          },
+        },
+      },
     });
-  } else if (user.role === 'Trainer') {
+  } else if (user.role === "Trainer") {
     new Chart(ctx1, {
-      type: 'bar',
+      type: "bar",
       data: {
-        labels: ['6AM', '9AM', '12PM', '3PM', '6PM', '9PM'],
-        datasets: [{
-          label: 'Sessions',
-          data: [4, 7, 2, 5, 8, 3],
-          backgroundColor: '#ffc107',
-          borderRadius: 5
-        }]
+        labels: ["6AM", "9AM", "12PM", "3PM", "6PM", "9PM"],
+        datasets: [
+          {
+            label: "Sessions",
+            data: [4, 7, 2, 5, 8, 3],
+            backgroundColor: "#ffc107",
+            borderRadius: 5,
+          },
+        ],
       },
-      options: lineOptions
+      options: lineOptions,
     });
 
     new Chart(ctx2, {
-      type: 'line',
+      type: "line",
       data: {
-        labels: ['W1', 'W2', 'W3', 'W4'],
-        datasets: [{
-          label: 'Avg. Rating',
-          data: [4.2, 4.5, 4.8, 4.9],
-          borderColor: '#212529',
-          tension: 0.4
-        }]
+        labels: ["W1", "W2", "W3", "W4"],
+        datasets: [
+          {
+            label: "Avg. Rating",
+            data: [4.2, 4.5, 4.8, 4.9],
+            borderColor: "#212529",
+            tension: 0.4,
+          },
+        ],
       },
-      options: lineOptions
+      options: lineOptions,
     });
   } else {
     // Member
     new Chart(ctx1, {
-      type: 'line',
+      type: "line",
       data: {
-        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-        datasets: [{
-          label: 'Calories',
-          data: [2100, 1850, 2400, 2200, 2600, 1500, 2100],
-          borderColor: '#ffc107',
-          tension: 0.4
-        }]
+        labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+        datasets: [
+          {
+            label: "Calories",
+            data: [2100, 1850, 2400, 2200, 2600, 1500, 2100],
+            borderColor: "#ffc107",
+            tension: 0.4,
+          },
+        ],
       },
-      options: lineOptions
+      options: lineOptions,
     });
 
     new Chart(ctx2, {
-      type: 'radar',
+      type: "radar",
       data: {
-        labels: ['Strength', 'Endurance', 'Flexibility', 'Speed', 'Agility'],
-        datasets: [{
-          data: [85, 70, 60, 90, 75],
-          backgroundColor: 'rgba(255,193,7,0.2)',
-          borderColor: '#ffc107',
-          pointBackgroundColor: '#ffc107'
-        }]
+        labels: ["Strength", "Endurance", "Flexibility", "Speed", "Agility"],
+        datasets: [
+          {
+            data: [85, 70, 60, 90, 75],
+            backgroundColor: "rgba(255,193,7,0.2)",
+            borderColor: "#ffc107",
+            pointBackgroundColor: "#ffc107",
+          },
+        ],
       },
-      options: { responsive: true, plugins: { legend: { display: false } }, scales: { r: { ticks: { display: false } } } }
+      options: {
+        responsive: true,
+        plugins: { legend: { display: false } },
+        scales: { r: { ticks: { display: false } } },
+      },
     });
   }
 }
 
 function setupNavigation() {
-  const links = document.querySelectorAll('.sidebar-link');
-  links.forEach(link => {
-    link.addEventListener('click', (e) => {
-      links.forEach(l => l.classList.remove('active'));
-      link.classList.add('active');
-      
-      currentSection = link.getAttribute('data-section');
+  const links = document.querySelectorAll(".sidebar-link");
+  links.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      links.forEach((l) => l.classList.remove("active"));
+      link.classList.add("active");
+
+      currentSection = link.getAttribute("data-section");
       updateSectionHeader();
       renderRoleDashboard();
-      
+
       // Refresh AOS for new content
-      if (typeof AOS !== 'undefined') {
+      if (typeof AOS !== "undefined") {
         AOS.refresh();
       }
     });
@@ -156,37 +184,39 @@ function setupNavigation() {
 }
 
 function updateSectionHeader() {
-  const desc = document.getElementById('sectionDescription');
+  const desc = document.getElementById("sectionDescription");
   const descriptions = {
     overview: "Here's what's happening in your fitness zone today.",
     schedule: "Manage your time and upcoming training sessions.",
     profile: "Keep your personal information and goals up to date.",
     payments: "Track your subscriptions and transaction history.",
-    settings: "Configure your account and notification preferences."
+    settings: "Configure your account and notification preferences.",
   };
   if (desc) desc.innerText = descriptions[currentSection] || "";
 }
 
 function initSidebarToggle() {
-  const toggleBtn = document.getElementById('sidebarToggle');
-  const sidebar = document.querySelector('.sidebar');
-  const overlay = document.getElementById('sidebarOverlay');
+  const toggleBtn = document.getElementById("sidebarToggle");
+  const sidebar = document.querySelector(".sidebar");
+  const overlay = document.getElementById("sidebarOverlay");
 
   if (toggleBtn && sidebar && overlay) {
     const toggle = () => {
-      sidebar.classList.toggle('show');
-      overlay.classList.toggle('show');
+      sidebar.classList.toggle("show");
+      overlay.classList.toggle("show");
       // Only lock vertical scroll to preserve horizontal hidden state
-      document.body.style.overflowY = sidebar.classList.contains('show') ? 'hidden' : 'auto';
+      document.body.style.overflowY = sidebar.classList.contains("show")
+        ? "hidden"
+        : "auto";
     };
 
-    toggleBtn.addEventListener('click', toggle);
-    overlay.addEventListener('click', toggle);
-    
+    toggleBtn.addEventListener("click", toggle);
+    overlay.addEventListener("click", toggle);
+
     // Close when clicking a link on mobile
 
-    sidebar.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
+    sidebar.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
         if (window.innerWidth < 992) toggle();
       });
     });
@@ -210,7 +240,9 @@ function renderRoleDashboard() {
       <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
         <div class="card border-0 shadow-sm p-4 rounded-4 h-100 bg-white">
           <div class="d-flex align-items-center justify-content-between mb-3">
-            <div class="bg-primary bg-opacity-10 p-3 rounded-circle"><i class="fa fa-users text-white mb-0"></i></div>
+            <div class="bg-primary p-3 rounded-circle text-dark d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+              <i class="fa fa-users h4 mb-0"></i>
+            </div>
             <span class="badge bg-success">+12%</span>
           </div>
           <h2 class="fw-bold mb-1">1,250</h2>
@@ -220,7 +252,7 @@ function renderRoleDashboard() {
       <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
         <div class="card border-0 shadow-sm p-4 rounded-4 h-100 bg-white">
           <div class="d-flex align-items-center justify-content-between mb-3">
-            <div class="bg-primary bg-opacity-10 p-3 rounded-circle"><i class="fa fa-money text-white mb-0"></i></div>
+            <div class="bg-primary p-3 rounded-circle text-dark d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;"><i class="fa fa-money h4 mb-0"></i></div>
             <span class="badge bg-success">+$2.4k</span>
           </div>
           <h2 class="fw-bold mb-1">$15,840</h2>
@@ -230,7 +262,7 @@ function renderRoleDashboard() {
       <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
         <div class="card border-0 shadow-sm p-4 rounded-4 h-100 bg-white">
           <div class="d-flex align-items-center justify-content-between mb-3">
-            <div class="bg-primary bg-opacity-10 p-3 rounded-circle"><i class="fa fa-id-card text-white mb-0"></i></div>
+            <div class="bg-primary p-3 rounded-circle text-dark d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;"><i class="fa fa-id-card h4 mb-0"></i></div>
             <span class="badge bg-warning">5 New</span>
           </div>
           <h2 class="fw-bold mb-1">42</h2>
@@ -327,8 +359,8 @@ function renderRoleDashboard() {
       profile: `
         <div class="col-lg-4">
           <div class="card border-0 shadow-sm rounded-4 p-4 bg-white text-center">
-            <div class="bg-dark d-inline-block p-4 rounded-circle mb-3 mx-auto">
-              <i class="fa fa-user-secret primary h1 mb-0"></i>
+            <div class="bg-dark p-3 rounded-circle text-dark d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+              <i class="fa fa-user-secret primary h4 mb-0"></i>
             </div>
             <h4 class="fw-bold">${user.name}</h4>
             <p class="text-muted">Head Administrator</p>
@@ -381,7 +413,7 @@ function renderRoleDashboard() {
             </div>
             <button class="btn btn-warning fw-bold mt-4 rounded-pill px-5">SAVE CHANGES</button>
           </div>
-        </div>`
+        </div>`,
     },
     Trainer: {
       overview: `
@@ -476,8 +508,14 @@ function renderRoleDashboard() {
           </div>
         </div>`,
       profile: `
-        <div class="col-md-4"><div class="card border-0 shadow-sm rounded-4 p-4 bg-white text-center"><img src="assets/images/trainer4.webp" class="rounded-circle mb-3 w-50 mx-auto"><h4 class="fw-bold">${user.name}</h4><p class="badge bg-warning text-dark">Senior Instructor</p></div></div>
-        <div class="col-md-8">
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm rounded-4 p-4 bg-white text-center">
+            <img src="assets/images/trainer4.webp" alt="Trainer" class="rounded-circle mx-auto d-block border border-3 border-warning shadow" style="width:120px; height:120px; object-fit:cover;">
+              <h4 class="fw-bold mt-3 mb-2">${user.name}</h4>
+                <span class="badge bg-warning text-dark px-3 py-2 rounded-pill">${user.role}</span>
+          </div>
+        </div>
+        <div class="col-md-8 h-100">
           <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
             <h5 class="fw-bold mb-3">Professional Bio</h5>
             <textarea class="form-control mb-3" rows="5">Expert in high-intensity interval training (HIIT) and strength conditioning with over 8 years of experience helping clients reach their transformation goals.</textarea>
@@ -503,7 +541,7 @@ function renderRoleDashboard() {
           <h5 class="fw-bold mb-3">Availability Settings</h5>
           <div class="form-check mb-2"><input class="form-check-input" type="checkbox" checked><label class="form-check-label">Available for New Clients</label></div>
           <div class="form-check mb-2"><input class="form-check-input" type="checkbox"><label class="form-check-label">Accept Group Classes</label></div>
-        </div></div>`
+        </div></div>`,
     },
     Member: {
       schedule: `
@@ -526,8 +564,8 @@ function renderRoleDashboard() {
       profile: `
         <div class="col-lg-4 text-center">
           <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
-            <div class="bg-primary bg-opacity-10 p-4 rounded-circle mb-3 mx-auto" style="width:100px; height:100px;">
-              <i class="fa fa-user primary h1"></i>
+            <div class="bg-warning rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" style="width:100px; height:100px;">
+              <i class="fa fa-user text-dark" style="font-size:50px;"></i>
             </div>
             <h4 class="fw-bold">${user.name}</h4>
             <p class="text-muted small">${user.email}</p>
@@ -667,15 +705,16 @@ function renderRoleDashboard() {
           </div>
           <button class="btn btn-outline-warning btn-dark w-100 rounded-pill fw-bold py-2 mt-auto">Extend Membership</button>
         </div>
-      </div>`
-    }
+      </div>`,
+    },
   };
 
   const role = user.role; // Admin, Trainer, or Member
-  roleContentEl.innerHTML = templates[role][currentSection] || templates.Member.overview;
-  
+  roleContentEl.innerHTML =
+    templates[role][currentSection] || templates.Member.overview;
+
   // Initialize charts after setting HTML
-  if (currentSection === 'overview') {
+  if (currentSection === "overview") {
     initCharts();
   }
 }

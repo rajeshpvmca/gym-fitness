@@ -176,13 +176,15 @@ function initSidebarToggle() {
     const toggle = () => {
       sidebar.classList.toggle('show');
       overlay.classList.toggle('show');
-      document.body.style.overflow = sidebar.classList.contains('show') ? 'hidden' : 'initial';
+      // Only lock vertical scroll to preserve horizontal hidden state
+      document.body.style.overflowY = sidebar.classList.contains('show') ? 'hidden' : 'auto';
     };
 
     toggleBtn.addEventListener('click', toggle);
     overlay.addEventListener('click', toggle);
     
     // Close when clicking a link on mobile
+
     sidebar.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         if (window.innerWidth < 992) toggle();
@@ -290,7 +292,7 @@ function renderRoleDashboard() {
       </div>
 
       <!-- Quick Admin Actions -->
-      <div class="col-lg-4" data-aos="fade-left">
+      <div class="col-lg-4" data-aos="fade-up">
         <div class="card border-0 shadow-sm rounded-4 p-4 bg-dark text-white h-100">
           <h5 class="fw-bold mb-4">Quick Actions</h5>
           <button class="btn btn-warning w-100 mb-3 fw-bold rounded-pill">Add New Trainer</button>
@@ -438,7 +440,7 @@ function renderRoleDashboard() {
         </div>
       </div>
 
-      <div class="col-lg-5" data-aos="fade-left">
+      <div class="col-lg-5" data-aos="fade-up">
         <div class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100">
           <h5 class="fw-bold mb-4"><i class="fa fa-tasks primary me-2"></i>Daily Tasks</h5>
           <div class="form-check mb-3">
@@ -569,19 +571,19 @@ function renderRoleDashboard() {
       overview: `
       <!-- Member Progress Highlights -->
       <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="card border-0 shadow-sm p-4 rounded-4 bg-white">
+        <div class="card border-0 shadow-sm p-4 rounded-4 bg-white h-100">
           <div class="d-flex justify-content-between align-items-center mb-3">
             <h6 class="fw-bold text-uppercase small mb-0">Daily Calories</h6>
-            <i class="fa fa-fire text-danger h4 mb-0"></i>
+            <i class="fa fa-fire primary h4 mb-0"></i>
           </div>
-          <h2 class="fw-bold mb-1">1,850 <small class="h6 text-muted">/ 2,400</small></h2>
+          <h2 class="fw-bold mb-3">1,850 <small class="h6 text-muted">/ 2,400</small></h2>
           <div class="progress" style="height: 6px;">
-            <div class="progress-bar bg-danger" style="width: 75%"></div>
+            <div class="progress-bar bg-warning" style="width: 75%"></div>
           </div>
         </div>
       </div>
       <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="card border-0 shadow-sm p-4 rounded-4 bg-white">
+        <div class="card border-0 shadow-sm p-4 rounded-4 bg-white h-100">
           <div class="d-flex justify-content-between align-items-center mb-3">
             <h6 class="fw-bold text-uppercase small mb-0">Weight Goal</h6>
             <i class="fa fa-balance-scale primary h4 mb-0"></i>
@@ -591,28 +593,28 @@ function renderRoleDashboard() {
         </div>
       </div>
       <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-        <div class="card border-0 shadow-sm p-4 rounded-4 bg-white text-center">
-          <h6 class="fw-bold text-uppercase small text-muted mb-2">Member Since</h6>
-          <h4 class="fw-bold mb-1">Jan 2025</h4>
+        <div class="card border-0 shadow-sm p-4 rounded-4 bg-white text-center h-100">
+          <h6 class="fw-bold text-uppercase small mb-3">Member Since</h6>
+          <h4 class="fw-bold mb-3">Jan 2025</h4>
           <span class="badge bg-primary text-dark rounded-pill">Ultimate Member</span>
         </div>
       </div>
 
       <!-- Charts Section -->
       <div class="col-lg-8" data-aos="fade-up">
-        <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
+        <div class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100">
           <h5 class="fw-bold mb-4">Calorie Burn Trend</h5>
           <div style="height: 250px;"><canvas id="chartAnalytics1"></canvas></div>
         </div>
       </div>
       <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="card border-0 shadow-sm rounded-4 p-4 bg-white">
+        <div class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100">
           <h5 class="fw-bold mb-4">Body Composition</h5>
           <div style="height: 250px;"><canvas id="chartAnalytics2"></canvas></div>
         </div>
       </div>
 
-      <div class="col-lg-7" data-aos="fade-right">
+      <div class="col-lg-7" data-aos="fade-up">
         <div class="card border-0 shadow-sm rounded-4 p-4 bg-dark text-white h-100 overflow-hidden position-relative">
           <div class="position-relative z-1">
             <h5 class="primary fw-bold mb-1">Today's Workout</h5>
@@ -641,12 +643,12 @@ function renderRoleDashboard() {
               </div>
             </div>
           </div>
-          <i class="fa fa-bolt position-absolute text-white opacity-10" style="bottom: -50px; right: -20px; font-size: 200px;"></i>
+          <i class="fa fa-bolt position-absolute primary opacity-10" style="bottom: -50px; right: -20px; font-size: 200px;"></i>
         </div>
       </div>
 
       <!-- Membership Benefits / Upgrade -->
-      <div class="col-lg-5" data-aos="fade-left">
+      <div class="col-lg-5" data-aos="fade-up">
         <div class="card border-0 shadow-sm rounded-4 p-4 bg-white h-100">
           <h5 class="fw-bold mb-4">Your Membership</h5>
           <div class="d-flex align-items-center gap-3 mb-4">
@@ -663,7 +665,7 @@ function renderRoleDashboard() {
               <p class="small mb-0">Free Protein Shake Coupon Earned!</p>
             </div>
           </div>
-          <button class="btn btn-dark w-100 rounded-pill fw-bold py-2 mt-auto">Extend Membership</button>
+          <button class="btn btn-outline-warning btn-dark w-100 rounded-pill fw-bold py-2 mt-auto">Extend Membership</button>
         </div>
       </div>`
     }

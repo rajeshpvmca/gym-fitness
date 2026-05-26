@@ -117,6 +117,13 @@ body {
     color: black;
 }
 
+/* Custom hover for btn-warning to match theme */
+.btn-warning:hover {
+    background-color: #212529 !important; /* Dark background */
+    color: #ffc107 !important; /* Primary yellow text */
+    border-color: #ffc107 !important; /* Yellow border */
+}
+
 .divider-wave {
     height: 2px;
     width: 50px;
@@ -744,7 +751,7 @@ body {
 /* Blog Section Hover Effects - Modern Trend */
 .blog-box {
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .blog-box:hover {

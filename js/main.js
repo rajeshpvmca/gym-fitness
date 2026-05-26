@@ -75,7 +75,7 @@ async function loadComponents() {
   }
 
   // =========================
-  // SMOOTH SCROLL & BACK TO TOP
+  // SMOOTH SCROLL
   // =========================
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -88,20 +88,6 @@ async function loadComponents() {
         });
       }
     });
-  });
-
-  const backToTop = document.createElement('button');
-  backToTop.id = "backToTop";
-  backToTop.innerHTML = '<i class="fa fa-arrow-up"></i>';
-  document.body.appendChild(backToTop);
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 500) backToTop.classList.add('show');
-    else backToTop.classList.remove('show');
-  });
-
-  backToTop.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
   // =========================

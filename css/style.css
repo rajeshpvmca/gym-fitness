@@ -541,9 +541,9 @@ body {
 }
 
 /* Mobile Header Improvements */
-@media (max-width: 991.98px) {
+/* @media (max-width: 991.98px) {
     .navbar-collapse {
-        background: rgba(22, 22, 22, 0.98); /* Deep dark background for mobile menu */
+        background: rgba(22, 22, 22, 0.98); 
         margin-top: 15px;
         padding: 25px;
         border-radius: 20px;
@@ -559,9 +559,9 @@ body {
     }
 
     .navbar-nav .nav-link::after {
-        display: none; /* Clean look for mobile */
+        display: none; 
     }
-}
+} */
 
 /* Modern Footer Transitions */
 .footer-link {
@@ -663,7 +663,7 @@ body {
     color:#ffc107 !important;
 }
 
-@media(max-width:991px){
+/* @media(max-width:991px){
 
     .navbar-collapse{
         background:#111;
@@ -676,6 +676,66 @@ body {
         margin-bottom:15px;
     }
 
+} */
+
+@media (max-width: 991px) {
+
+    .navbar-collapse{
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.98);
+        z-index: 9999;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        padding: 50px;
+        transition: left 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+        visibility: hidden;
+        backdrop-filter: blur(10px);
+    }
+
+    .navbar-collapse.show {
+        left: 0;
+        visibility: visible;
+    }
+
+    .navbar-nav{
+        width: 100%;
+        text-align: left;
+    }
+
+    .navbar-nav .nav-item{
+        margin: 15px 0;
+        transform: translateX(-20px);
+        opacity: 0;
+        transition: 0.4s ease;
+        transition-delay: 0.2s;
+    }
+
+    .navbar-collapse.show .nav-item {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .navbar-nav .nav-link{
+        font-size: 28px;
+        font-weight: 600;
+        padding: 0 !important;
+        display: inline-block;
+    }
+
+    .navbar-collapse .btn{
+        width: fit-content;
+        padding: 12px 35px !important;
+    }
+
+    .navbar-toggler{
+        position: relative;
+        z-index: 10000;
+    }
 }
 
 /* Blog Section Hover Effects - Modern Trend */

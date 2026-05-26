@@ -41,6 +41,17 @@ async function loadComponents() {
         <button onclick="logout()" class="btn btn-danger btn-sm px-3 fw-bold">Logout</button>
       `;
     }
+
+    // Handle body scroll lock for mobile menu
+    const navbarCollapse = document.getElementById('navbarNav');
+    if (navbarCollapse) {
+      navbarCollapse.addEventListener('show.bs.collapse', () => {
+        document.body.style.overflow = 'hidden';
+      });
+      navbarCollapse.addEventListener('hide.bs.collapse', () => {
+        document.body.style.overflow = 'auto';
+      });
+    }
   }
 
   // =========================

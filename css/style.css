@@ -675,3 +675,43 @@ body {
 .blog-box:hover .blog-info h4 a {
     color: #ffc107 !important;
 }
+
+/* FAQ Section Accordion Styling */
+.accordion-item {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Light border for contrast */
+    margin-bottom: 10px; /* Space between items */
+    border-radius: 0.5rem; /* Rounded corners for items */
+}
+
+.accordion-button {
+    background-color: transparent !important;
+    color: #fff !important; /* White text for questions */
+    font-size: 1.1rem;
+    padding: 1.25rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #ffc107 !important; /* Primary color for active question */
+    background-color: rgba(255, 193, 7, 0.1) !important; /* Subtle primary background for active */
+    border-bottom: 1px solid #ffc107; /* Primary border for active */
+    box-shadow: none;
+}
+
+.accordion-button::after {
+    filter: invert(1); /* Invert arrow color for dark background */
+    transform: rotate(-90deg); /* Default arrow direction */
+    transition: transform 0.3s ease;
+}
+
+.accordion-button:not(.collapsed)::after {
+    transform: rotate(0deg); /* Arrow direction when open */
+}
+
+.accordion-body {
+    color: rgba(255, 255, 255, 0.75) !important; /* Lighter text for answers */
+    padding: 1rem 1.5rem 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}

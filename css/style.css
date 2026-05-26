@@ -776,6 +776,28 @@ body {
     color: #ffc107 !important;
 }
 
+/* Blog Read More Button/Link Animation */
+.blog-box .btn-warning i,
+.blog-box a.primary i {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.blog-box a.primary {
+    transition: color 0.3s ease;
+}
+
+.blog-box .btn-warning:hover i {
+    transform: translateX(5px);
+}
+
+.blog-box a.text-dark:hover i {
+    transform: translateX(5px);
+}
+
+.blog-box a.text-dark:hover {
+    color: #ffc107 !important;
+}
+
 /* FAQ Section Accordion Styling */
 .accordion-item {
     background-color: transparent;

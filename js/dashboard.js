@@ -359,7 +359,7 @@ function renderRoleDashboard() {
       profile: `
         <div class="col-lg-4">
           <div class="card border-0 shadow-sm rounded-4 p-4 bg-white text-center">
-            <div class="bg-dark p-3 rounded-circle text-dark d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+            <div class="bg-dark p-3 rounded-circle text-dark d-flex align-items-center justify-content-center mx-auto" style="width: 50px; height: 50px;">
               <i class="fa fa-user-secret primary h4 mb-0"></i>
             </div>
             <h4 class="fw-bold">${user.name}</h4>
